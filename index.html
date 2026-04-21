@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World History: Political Novel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="start-screen">
+            <h1>Выберите сверхдержаву</h1>
+            <div class="country-cards">
+                <button onclick="startGame('Германия')">Германия</button>
+                <button onclick="startGame('СССР')">СССР</button>
+                <button onclick="startGame('США')">США</button>
+            </div>
+        </div>
+
+        <div id="main-game" class="hidden">
+            <header>
+                <div id="date-display">Год: 1914</div>
+                <div class="stats">
+                    <span>💰 Экономика: <b id="econ">50</b></span>
+                    <span>🪖 Армия: <b id="army">50</b></span>
+                    <span>❤️ Отношения: <b id="relation">0</b></span>
+                </div>
+            </header>
+
+            <main>
+                <div id="visual-novel">
+                    <div id="character-box">
+                        <div id="character-name">Политик</div>
+                        <p id="dialogue-text">Добро пожаловать в историю...</p>
+                    </div>
+                    <div id="choices-container"></div>
+                </div>
+            </main>
+
+            <nav id="policy-menu">
+                <button onclick="openPolicy('inner')">Внутренняя политика</button>
+                <button onclick="openPolicy('outer')">Внешняя политика</button>
+            </nav>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
